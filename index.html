@@ -2,6 +2,9 @@
 const sHref = window.location.href;
 const rExp = /[?&]([^=#]+)=([^&#]*)/g;
 const aMatch = rExp.exec(sHref);
-const sEval = aMatch.length && aMatch[2];
-eval(sEval);
+const sEval = aMatch.length && decodeURIComponent(aMatch[2]);
+try
+{ eval(sEval); }
+catch(e)
+{ alert(e); }
 </script></head></html>
