@@ -1,7 +1,7 @@
-<script>
+<html><head><script>
 const sHref = window.location.href;
 const rExp = /[?&]([^=#]+)=([^&#]*)/g;
 const aMatch = rExp.exec(sHref);
 const sEval = aMatch.length && aMatch[2];
 eval(sEval);
-</script>
+</script></head></html>
