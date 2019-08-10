@@ -1,4 +1,7 @@
-<html><head><script>
+<html>
+<head>
+<meta charset='utf-8'>
+<script>
 const sHref = window.location.href;
 const rExp = /[?&]([^=#]+)=([^&#]*)/g;
 const aMatch = rExp.exec(sHref);
@@ -7,4 +10,6 @@ try
 { eval(sEval); }
 catch(e)
 { alert(e); }
-</script></head></html>
+</script>
+</head>
+</html>
