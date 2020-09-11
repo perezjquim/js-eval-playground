@@ -7,11 +7,11 @@ const rExp = /[?&]([^=#]+)=([^&#]*)/g;
 const aMatch = rExp.exec(sHref);
 const sEval = aMatch.length && decodeURIComponent(aMatch[2]);
 try
-{ eval(sEval); }
+{ eval(sEval.slice(1,-1)); }
 catch(e)
 { 
   try
-  { eval(sEval.slice(1,-1)); }
+  { eval(sEval); }
   catch(e)
   { alert(e); }
 }
