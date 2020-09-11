@@ -9,7 +9,12 @@ const sEval = aMatch.length && decodeURIComponent(aMatch[2]);
 try
 { eval(sEval); }
 catch(e)
-{ alert(e); }
+{ 
+  try
+  { eval(sEval.slice(1,-1)); }
+  catch(e)
+  { alert(e); 
+}
 </script>
 </head>
 </html>
