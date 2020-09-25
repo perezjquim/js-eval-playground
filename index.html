@@ -2,10 +2,8 @@
 <head>
 <meta charset='utf-8'>
 <script>
-const sHref = window.location.search;
-const rExp = /[?&]([^=#]+)=([^&#]*)/g;
-const aMatch = rExp.exec(sHref);
-const sEval = aMatch.length && decodeURIComponent(aMatch[2]);
+const sSearch = window.location.search.substr(3);
+const sEval = sSearch.length && decodeURIComponent(sSearch);
 try
 { eval(sEval.slice(1,-1)); }
 catch(e)
