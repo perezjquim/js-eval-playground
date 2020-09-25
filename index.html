@@ -2,7 +2,7 @@
 <head>
 <meta charset='utf-8'>
 <script>
-const sHref = window.location.href;
+const sHref = window.location.search;
 const rExp = /[?&]([^=#]+)=([^&#]*)/g;
 const aMatch = rExp.exec(sHref);
 const sEval = aMatch.length && decodeURIComponent(aMatch[2]);
